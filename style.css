@@ -225,14 +225,12 @@ main {
 .content {
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 
 section {
   position: relative;
   height: 110vh;
   max-height: 150vw;
-  overflow: hidden;
 }
 
 .img {
