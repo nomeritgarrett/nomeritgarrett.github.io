@@ -460,5 +460,10 @@ body {
   will-change: transform;
   overflow: hidden;
   }
-
+.stoper {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overscroll: hidden;
+  }
 }
