@@ -13,7 +13,19 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 }
 
 if(!isMobile){
-    
+    imgSections.forEach(section => {
+        let clonedSection = section.cloneNode(true);
+        clonedSection.classList.add('clone')
+        content.appendChild(clonedSection)
+    })
+}
+
+const wraps = [...document.querySelectorAll('.wrap')];
+console.log(wraps)
+const menuTog = document.querySelector('.menu-tog');
+const menu = document.querySelector('.menu');
+const menuWraps = [...document.querySelectorAll('.menu-wrap')];
+
 // Set scroll dimensions
 function init(){
     document.body.style.height = `${content.getBoundingClientRect().height}px`;
@@ -28,20 +40,6 @@ function displayWraps(){
         }, (idx + 1) * 50)
     })
 }
-    
-} 
-    imgSections.forEach(section => {
-        let clonedSection = section.cloneNode(true);
-        clonedSection.classList.add('clone')
-        content.appendChild(clonedSection)
-    })
-
-
-const wraps = [...document.querySelectorAll('.wrap')];
-console.log(wraps)
-const menuTog = document.querySelector('.menu-tog');
-const menu = document.querySelector('.menu');
-const menuWraps = [...document.querySelectorAll('.menu-wrap')];
 
 function toggleMenu(){
     if(menu.classList.contains('active')){
@@ -115,7 +113,6 @@ function scroll(){
     requestAnimationFrame(scroll)
 }
 
-document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
 
 displayWraps()
 init()
@@ -127,3 +124,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 200)
     scroll()
 })
+
