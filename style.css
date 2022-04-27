@@ -328,10 +328,12 @@ section {
 
 html {
   overflow-x: hidden;
+  overflow:-y: hidden;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden:
 }
 
 
