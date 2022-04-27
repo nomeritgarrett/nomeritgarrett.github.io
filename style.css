@@ -448,7 +448,7 @@ body {
   overflow: hidden;
   top: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
 }
   .scrollable {
   position: absolute;
