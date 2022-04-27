@@ -326,18 +326,6 @@ section {
   height: 60vh;
 }
 
-html {
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-body {
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-
-
-
 /* Large Screen (1001px and up) */
 @media only screen and (min-width: 1001px) {
 
@@ -374,7 +362,18 @@ h1 {
 .footer {
   display: none;
 }
-}
+
+body {
+  overflow: hidden;
+  }
+  
+ .scrollable {
+   overflow: hidden;
+  }
+  
+  html {
+    overflow: hidden;
+  }
 
 section {
   position: relative;
