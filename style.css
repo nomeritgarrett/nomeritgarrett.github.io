@@ -1,0 +1,437 @@
+:root {
+  --main-bg-color: #f6f4f2;
+}
+
+@font-face {
+  font-family: "engraversgothic";
+  src: url(./EngraversGothic.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "engraversgothic", serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: #191919;
+}
+
+html,
+body {
+  width: 100%;
+  background-color: var(--main-bg-color);
+  overscroll-behavior: none;
+}
+
+.menu-tog {
+  position: fixed;
+  top: 46px;
+  right: 50px;
+  width: 30px;
+  height: 7px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: space-between;
+  z-index: 4;
+  mix-blend-mode: difference;
+}
+
+.monogram {
+  position: fixed;
+  top: -25px;
+  left: 40vw;
+  right: auto;
+  text-align: center;
+  z-index: 3;
+  width: 20vw;
+  
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 40px;
+  text-align: center;
+  z-index: 100;
+  text-transform: uppercase;
+}
+ 
+.logo {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  scale: 27%;
+}
+  
+.menu-tog span {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.menu-tog.active span:nth-child(1) {
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.menu-tog.active span:nth-child(2) {
+  position: absolute;
+  transform: rotate(-45deg);
+}
+
+.header {
+  position: fixed;
+  top: 40px;
+  left: 50px;
+  width: 96%;
+  z-index: 2;
+  color: black;
+  text-transform: uppercase;
+}
+
+.pages {
+  position: fixed;
+  top: 40px;
+  right: 50px;
+  width: 30%;
+  z-index: 1;
+  color: black;
+  text-transform: uppercase;
+  text-align: right;
+  justify-content: space-between;
+}
+
+h1 {
+  Font: EngraversGothic;	
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  letter-spacing: 4px;
+}
+
+.info-text {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.wrap {
+  position: relative;
+  display: block;
+  line-height: auto;
+  overflow: hidden;
+  transition: 0.5s;
+  will-change: transform;
+}
+
+.wrap h1,
+.wrap .img {
+  transform: translateY(100%);
+  transition: 0.5s;
+  will-change: transform;
+}
+
+.wrap.active h1,
+.wrap.active .img {
+  transform: translateY(0);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-bg-color);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.menu.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.links {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  height: 150px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.links ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-wrap a {
+  display: block;
+  font-size: 24px;
+  transform: translateY(100%);
+  transition: 0.5s;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 4px;
+}
+
+.menu-wrap.active a {
+  transform: translateY(0);
+}
+
+.menu-wrap span {
+  font-size: 12px;
+}
+
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+.scrollable {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+}
+
+section {
+  position: relative;
+  height: 110vh;
+  max-height: 150vw;
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-1 {
+  position: absolute;
+  top: 25%;
+  right: 13%;
+  width: 30vw;
+  height: 50%;
+  width-min: 600px; 
+}
+
+.img-2 {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 50vw;
+  height: 80vh; 
+}
+
+.img-3 {
+  position: absolute;
+  top: 20%;
+  left: 12%;
+  width: 20%;
+  height: 40%;
+}
+
+.img-4 {
+  position: absolute;
+  top: 10%;
+  right: 15vw;
+  width: 40vw;
+  height: 80vh;
+  max-height: 80vw;
+  min-width: 300px;
+}
+
+.img-5 {
+  position: absolute;
+  top: 20%;
+  left: 7vw;
+  width: 30vw;
+  height: 65vh;
+  max-height: 70vw;
+  min-width: 250px;
+}
+
+.img-6 {
+  position: absolute;
+  top: 20%;
+  right: 6vw;
+  width: 30vw;
+  height: 55vh;
+  max-height: 50vw;
+  min-width: 200px;
+}
+
+.img-7 {
+  position: absolute;
+  top: 10%;
+  left: 23vw;
+  width: 40vw;
+  height: 90vh;
+}
+
+.img-8 {
+  position: absolute;
+  top: 25%;
+  right: 16%;
+  width: 20vw;
+  height: 50vh;
+}
+
+.img-9 {
+  position: absolute;
+  top: 10%;
+  right: 30%;
+  width: 40vw;
+  height: 60vh;
+}
+
+/* Large Screen (1001px and up) */
+@media only screen and (min-width: 1001px) {
+
+.menu-tog {
+  display: none;
+}
+
+.header {
+  font-size: 30px;
+}
+
+
+}
+
+/* Extra small devices (phones, 1000px and down) */
+@media only screen and (max-width: 1000px) {
+
+h1 {
+  font-size: 20px;
+}
+
+.pages {
+  display: none;
+}
+
+.monogram {
+  display: none;
+}
+
+.footer {
+  display: none;
+}
+}
+
+section {
+  position: relative;
+  height: 90vh;
+  max-height: 150vw;
+}
+
+.img-2 {
+  position: absolute;
+  top: 5%;
+  right: 20%;
+  width: 70vw;
+  height: 80vh; 
+}
+
+.img-1 {
+  position: absolute;
+  top: 25%;
+  right: 13%;
+  width: 50vw;
+  height: 50vh;
+  width-min: 600px; 
+}
+
+.img-3 {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 40%;
+  height: 60vh;
+}
+
+.img-4 {
+  position: absolute;
+  top: 7%;
+  right: 6vw;
+  width: 60vw;
+  height: 80vh;
+}
+
+.img-5 {
+  position: absolute;
+  top: 20%;
+  left: 13vw;
+  width: 50vw;
+  height: 65vh;
+}
+
+.img-6 {
+  position: absolute;
+  top: 20%;
+  right: 6vw;
+  width: 60vw;
+  height: 60vh;
+}
+
+.img-7 {
+  position: absolute;
+  top: 0%;
+  left: 6vw;
+  width: 60vw;
+  height: 90vh;
+}
+
+.img-8 {
+  position: absolute;
+  top: 25%;
+  right: 16%;
+  width: 35vw;
+  height: 50vh;
+}
+
+.img-9 {
+  position: absolute;
+  top: 10%;
+  right: 35%;
+  width: 50vw;
+  height: 60vh;
+}
+}
