@@ -339,6 +339,10 @@ section {
 /* Extra small devices (phones, 1000px and down) */
 @media only screen and (max-width: 1000px) {
 
+main {
+  overflow: hidden;
+}
+  
 h1 {
   font-size: 20px;
 }
