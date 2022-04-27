@@ -12,7 +12,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     isMobile = true;
 }
 
-if (!isMobile()) {
+if(!isMobile){
     imgSections.forEach(section => {
         let clonedSection = section.cloneNode(true);
         clonedSection.classList.add('clone')
