@@ -434,4 +434,15 @@ section {
   width: 50vw;
   height: 60vh;
 }
+
+main {
+  overflow: hidden;
+  height: 100%;
+  width: 100;
+}
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 }
