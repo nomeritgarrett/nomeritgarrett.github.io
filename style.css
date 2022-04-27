@@ -24,12 +24,16 @@ a {
   color: #191919;
 }
 
-html,
-body {
+html,{
   width: 100%;
-  background-color: var(--main-bg-color);
-  overscroll-behavior: none;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
 
 .menu-tog {
   position: fixed;
