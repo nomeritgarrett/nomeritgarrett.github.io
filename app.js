@@ -16,9 +16,6 @@ if (!isMobile()) {
         clonedSection.classList.add('clone')
         content.appendChild(clonedSection)
     })
-}
-
-
 const wraps = [...document.querySelectorAll('.wrap')];
 console.log(wraps)
 const menuTog = document.querySelector('.menu-tog');
@@ -123,3 +120,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 200)
     scroll()
 })
+}
