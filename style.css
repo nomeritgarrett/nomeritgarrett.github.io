@@ -326,6 +326,16 @@ section {
   height: 60vh;
 }
 
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+
 /* Large Screen (1001px and up) */
 @media only screen and (min-width: 1001px) {
 
