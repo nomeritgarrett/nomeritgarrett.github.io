@@ -115,6 +115,7 @@ function scroll(){
     requestAnimationFrame(scroll)
 }
 
+document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
 
 displayWraps()
 init()
