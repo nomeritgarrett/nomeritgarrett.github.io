@@ -13,11 +13,12 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 }
 
 if(!isMobile){
-    imgSections.forEach(section => {
-        let clonedSection = section.cloneNode(true);
-        clonedSection.classList.add('clone')
-        content.appendChild(clonedSection)
-    })
+    document.body.style.overflow = 'hidden';
+    function HideScrollbar() {
+  var style = document.createElement("style");
+  style.innerHTML = `body::-webkit-scrollbar {display: none;}`;
+  document.head.appendChild(style);
+}
 }
 
 const wraps = [...document.querySelectorAll('.wrap')];
