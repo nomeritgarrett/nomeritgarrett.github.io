@@ -12,13 +12,13 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     isMobile = true;
 }
 
-if(!isMobile){
+
     imgSections.forEach(section => {
         let clonedSection = section.cloneNode(true);
         clonedSection.classList.add('clone')
         content.appendChild(clonedSection)
     })
-}
+
 
 const wraps = [...document.querySelectorAll('.wrap')];
 console.log(wraps)
@@ -93,7 +93,7 @@ document.addEventListener('click', () => reverse = !reverse)
 function scroll(){
     target = window.scrollY;
 
-    if(!isMobile){
+  
         if(target <= 0){
             target = (content.offsetHeight / 2) - 1;
             window.scrollTo(0, target);
@@ -101,7 +101,7 @@ function scroll(){
             target = 1;
             window.scrollTo(0, target);
         }
-    }
+    
 
     if(reverse){
         target --
