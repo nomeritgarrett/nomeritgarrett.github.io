@@ -94,9 +94,20 @@ function scroll(){
     target = window.scrollY;
 
     if(!isMobile){
-        if(target <= 0){
-            target = (content.offsetHeight / 2) - 1;
+        if(target >= content.offsetHeight / 2){
+            target = 1;
             window.scrollTo(0, target);
+        }
+    }
+
+    if(reverse){
+        target --
+    }else{
+        target++
+    }
+    window.scrollTo(0, target)
+    scrollable.style.transform = `translateY(-${target}px)`;
+    requestAnimationFrame(scroll)
         }else if( target >= content.offsetHeight / 2){
             target = 1;
             window.scrollTo(0, target);
